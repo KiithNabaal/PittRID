@@ -1,0 +1,48 @@
+/* main_styles.css - This file is imported in to main.html for various styling needs.
+ * This allows you to apply styles in a simple manner, so you don't need to apply these
+ * to each individual element.
+ */
+
+/* This is an ID selector. Used for a single, distinct element */
+#main-border { 
+	border-color: black; 
+	border-style: solid; 
+	border-width: 5px; 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+}
+
+#field-border { 
+	border-color: #999999; 
+	border-style: solid; 
+	border-width: 2px;
+	height: 21px;
+	position: relative;
+}
+
+/* This is a class selector. Used for multiple elements */
+.field {
+	border-color: black;
+	border-right-style: solid;
+	border-width: 2px;
+	font-size: 18px;
+	position: relative;
+	display: inline;
+}
+
+#view-frame {
+	border-color: #6B6BB2;
+	border-style: solid;
+	border-width: 5px;
+	position: relative;
+	height: 85%;
+}
+
+.divider {
+	width:15px;
+	height:auto;
+	display:inline-block;
+}

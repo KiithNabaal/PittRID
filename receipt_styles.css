@@ -1,0 +1,40 @@
+#receipt-container {
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 7px;
+}
+
+.even-receipt {
+	background-color: #D1D1D1;
+	width: 100%;
+	height: 18px;
+	top: 5px;
+	position: relative;
+}
+
+.odd-receipt {
+	background-color: white;
+	width: 100%;
+	height: 18px;
+	top: 5px;
+	position: relative;
+}
+
+.receipt-field {
+	background-color: #CCCCCC;
+	border-color: black;
+	border-style: solid;
+	border-width: 2px;
+	position: relative;
+	display: inline;
+	text-align: center;
+	padding: 5px 13% 5px 13%;
+}
+
+.receipt-entry {
+	position: relative;
+	padding: 5px 13% 5px 13%;
+	display: inline;
+}

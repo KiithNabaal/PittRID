@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Login Page</title>
+
+  		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  		<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel = "stylesheet" href = "main_styles.css">
+	</head>
+
+	<body>
+
+
+<script>
+  $(function() {
+    $("input[type=submit], button")
+      .button()
+      .click(function(event) {
+        event.preventDefault();
+      });
+  });
+  </script>
+		<form method = "POST" action = #>
+			<table align="center">
+
+				<tr>
+					<td colspan = "4"><img src="logo.png" style = "margin-left: auto; margin-right: auto; display: block;"/></td>
+				</tr>
+
+				<tr>
+					<td colspan = "2">
+						<div style = "text-align: center;">
+							<a href = #>About Us</a>
+							<div class = "divider"></div>
+
+							<a href = #>Products</a>
+							<div class = "divider"></div>
+
+							<a href = #>Corporate</a>
+							<div class = "divider"></div>
+
+							<a href = #>Contact</a>
+						</div>				
+
+					<hr>
+						<p>
+							<b><u><h2>News:</h2></u></b>
+						</p>
+
+						<p>
+							<b><u>RID makes strides during Startup Weekend</u></b><br />
+							Students at the University of Pittsburgh attended a startup weekend to collaborate with <br />
+							each other and mentors, to jump start businesses. RID was selected as one of the more <br />
+							popular companies ... <a href = #>read more</a>
+						</p>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Login: </td>
+					<td><input type="text" name = "username"></td>
+				</tr>
+				<tr>
+					<td>Password: </td>
+					<td><input type="password" name = "pass"></td>
+				</tr>
+				<tr>
+					<td>
+						<button onclick="javascript:location.href='main.html'">Submit</button>
+						<button>Create Account</button>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

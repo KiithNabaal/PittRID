@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Main Page</title>
+		<link rel = "stylesheet" type = "text/css" href = "main_styles.css">
+
+		<script>
+			function clearText() {
+				document.getElementById("search").value = "";
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id = "main-border">
+			<input id = "search" type = "text" onclick = "clearText()" value = "Search receipts" style = "position: relative;"></input>
+
+			<div id = "field-border">
+				
+				<div id = "recent" class = "field">
+					Recent
+				</div>
+
+				<div id = "category" class = "field">
+					Category
+				</div>
+
+				<div id = "folder" class = "field">
+					Folder
+				</div>
+
+				<div id = "account" class = "field">
+					My Account
+				</div>
+
+				<div id = "logout" class = "field">
+					Logout
+				</div>
+			</div>
+
+			<div id = "view-frame">
+				<iframe id = "viewWindow" src="recent.html" style = "position: relative; width: 100%; height: 97%">Your browser does not support our product.</iframe>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("recent").addEventListener("click", function() { document.getElementById("viewWindow").src = "recent.html" });
+			document.getElementById("category").addEventListener("click", function() { document.getElementById("viewWindow").src = "category.html" });
+			document.getElementById("folder").addEventListener("click", function() { document.getElementById("viewWindow").src = "folder.html" });
+		</script>
+	</body>
+</html>

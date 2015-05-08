@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<!-- This page could be a php file in the future. It will load all receipts from a database, and present
+     them here.
+ -->
+
+<html>
+
+	<head>
+		<link rel = "stylesheet" type = "text/css" href = "receipt_styles.css">
+
+		<script>
+			var receipt_list = [];
+
+			function viewReceipt() {
+				//Replace this page with a PHP page in the future
+				window.open("sample-receipt.html", "", 200, 300);
+			}
+		</script>
+	</head>
+
+	<body>		
+		<div id = "receipt-container">
+			<div id = "Origin of Receipt" class = "receipt-field">
+				Origin of Receipt
+			</div>
+
+			<div id = "Date of Receipt" class = "receipt-field">
+				Date of Receipt
+			</div>
+
+			<div id = "Total Cost" class = "receipt-field">
+				Total Cost
+			</div>
+		</div>
+
+		<script>
+
+			//Hardcode individual values into the list of receipts
+			receipt_list[0] = new Object();
+			receipt_list[0].origin = "Wal-Mart";
+			receipt_list[0].date = "1/3/14";
+			receipt_list[0].cost = "$3.35";
+
+			receipt_list[1] = new Object();
+			receipt_list[1].origin = "Radio Shack";
+			receipt_list[1].date = "1/8/14";
+			receipt_list[1].cost = "$10.24";
+
+			receipt_list[2] = new Object();
+			receipt_list[2].origin = "Sunoco";
+			receipt_list[2].date = "1/10/14";
+			receipt_list[2].cost = "$51.60";
+
+			receipt_list[3] = new Object();
+			receipt_list[3].origin = "Alco Parking";
+			receipt_list[3].date = "1/10/14";
+			receipt_list[3].cost = "$5.00";
+
+			receipt_list[4] = new Object();
+			receipt_list[4].origin = "Comcast";
+			receipt_list[4].date = "1/18/14";
+			receipt_list[4].cost = "$100.00";
+
+			receipt_list[5] = new Object();
+			receipt_list[5].origin = "Duquesne Light";
+			receipt_list[5].date = "1/20/14";
+			receipt_list[5].cost = "$95.00";
+
+			receipt_list[6] = new Object();
+			receipt_list[6].origin = "Sonoco";
+			receipt_list[6].date = "1/20/14";
+			receipt_list[6].cost = "$49.32";
+
+			 for(var i = 0; i < 7; i++) {
+				var currReceipt = document.createElement("div");
+				currReceipt.id = "receipt" + i;
+
+				currReceipt.onclick = viewReceipt;
+
+				if((i % 2) == 0) {
+					currReceipt.className = "odd-receipt";
+				}
+
+				else {
+					currReceipt.className = "even-receipt";
+				}
+
+				receipt_list.push(currReceipt);
+
+				var originDIV = document.createElement("div");
+				var dateDIV = document.createElement("div");
+				var totalDIV = document.createElement("div");
+
+				originDIV.className = "receipt-entry";
+				originDIV.innerHTML = receipt_list[i].origin;
+
+				dateDIV.className = "receipt-entry";
+				dateDIV.innerHTML = receipt_list[i].date;
+
+				totalDIV.className = "receipt-entry";
+				totalDIV.innerHTML = receipt_list[i].cost;
+
+				currReceipt.appendChild(originDIV);
+				currReceipt.appendChild(dateDIV);
+				currReceipt.appendChild(totalDIV);
+
+				document.getElementById("receipt-container").appendChild(currReceipt);
+			}
+		</script>
+	</body>
+</html>
